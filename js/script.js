@@ -19,7 +19,7 @@ var Movie = React.createClass( {
         render: function() {
         return (
             React.createElement( 'div', {},
-                React.createElement( 'ul', { key: movie_id }, ),
+                React.createElement( 'ul', { key: movie.id }, ),
                 React.createElement( 'li',  {}, this.props.movie.name )
                 )
             )    
@@ -31,12 +31,9 @@ var image = {
     src: './images/kotki-dlugowlose.jpg'
 };
 
-var movie = {
-    id: 1,
-    name: 'Test'
-}
 
-var element2 = React.createElement( Movie, { key: movie_id, movie: movie } )
+
+var element2 = React.createElement( Movie, { key: movie.id, movie: movie } )
     ReactDOM.render( element2, document.getElementById( 'app' ) );
 
 var element = React.createElement( GalleryItem, { image: image } );
