@@ -5,7 +5,7 @@ var GalleryItem = React.createClass( {
         render: function() {
         return (
                 React.createElement( 'img', { src: this.props.image } )
-               )
+               );
         },
 });
 
@@ -21,8 +21,7 @@ var Movie = React.createClass( {
                 // Ustawienie atrybutu "src" w propsach aby zapobiec blednemu wyswietlaniu strony
                 React.createElement( GalleryItem, { image: this.props.movie.image } )
                 )
-
-            )    
+            );    
         },
 });
 
@@ -31,10 +30,10 @@ var MovieTitle = React.createClass( {
         title: React.PropTypes.string.isRequired,
     },
         render: function() {
-            React.createElement( 'div', {},
-        React.createElement( 'ul', {}, ),
-                React.createElement( 'li', {}, this.props.title )
-            )
+        return (
+            React.createElement( 'h1', {}, ),
+            React.createElement( 'p', {}, this.props.title )
+            );    
         }
 });
 
@@ -43,10 +42,10 @@ var MovieDescription = React.createClass( {
         desc: React.PropTypes.string.isRequired,
     },
         render: function() {
-            React.createElement( 'div', {},
-                React.createElement( 'ul', {}, ),
-                React.createElement( 'li', {}, this.props.desc )
-            )
+        return ( 
+            React.createElement( 'h1', {}, ),
+            React.createElement( 'p', {}, this.props.desc )
+            );    
         }
 });
 
@@ -55,11 +54,13 @@ var MovieList = React.createClass( {
         list: React.PropTypes.object.isRequired,
     },
         render: function() {
+        return (    
             React.createElement( 'div', {},
-        React.createElement( 'ul', {}, ),
-                React.createElement( 'li', {}, this.props.list.name )
+            React.createElement( 'ul', {}, ),
+            React.createElement( 'li', {}, this.props.list.name )
             )
-        }
+        )
+    }
 });
 
 var image = {
@@ -106,9 +107,9 @@ var moviesElements = movies.map( function( movie ) {
 
 
 var element = 
-    React.createElement( 'div', {},
+        React.createElement( 'div', {},
         React.createElement( 'h1', {}, 'Lista filmów' ),
         React.createElement( 'ul', {}, moviesElements )
     );
 
-    ReactDOM.render( element, document.getElementById('app'));
+ReactDOM.render( element, document.getElementById('app'));

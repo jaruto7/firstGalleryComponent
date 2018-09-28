@@ -1,0 +1,23 @@
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+p {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+}
+
+img {
+    width: 50%;
+    min-width: 1024px;
+}
