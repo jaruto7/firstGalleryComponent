@@ -31,7 +31,7 @@ var MovieTitle = React.createClass( {
     },
         render: function() {
         return (
-            React.createElement( 'h1', {}, ),
+            React.createElement( 'h2', {}, ),
             React.createElement( 'p', {}, this.props.title )
             );    
         }
@@ -43,7 +43,7 @@ var MovieDescription = React.createClass( {
     },
         render: function() {
         return ( 
-            React.createElement( 'h1', {}, ),
+            React.createElement( 'h2', {}, ),
             React.createElement( 'p', {}, this.props.desc )
             );    
         }
