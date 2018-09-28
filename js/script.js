@@ -55,8 +55,7 @@ var MovieList = React.createClass( {
         return (
             React.createElement( 'li', {}, this.props.list.name )
             )
-        )
-    }
+        }
 });
 
 var image = {
